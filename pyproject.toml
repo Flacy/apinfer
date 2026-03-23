@@ -26,9 +26,6 @@ dynamic = [
 ]
 
 [project.optional-dependencies]
-asgi = [
-    "starlette>=0.41.0", # ASGI types + middleware base
-]
 spec = [
     "jsonschema>=4.23.0", # OpenAPI response validation (spec-aware mode)
     "pyyaml>=6.0.2", # Parse OpenAPI YAML files

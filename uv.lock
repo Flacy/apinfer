@@ -47,9 +47,6 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
-asgi = [
-    { name = "starlette" },
-]
 spec = [
     { name = "jsonschema" },
     { name = "pyyaml" },
@@ -72,10 +69,9 @@ requires-dist = [
     { name = "pyyaml", marker = "extra == 'spec'", specifier = ">=6.0.2" },
     { name = "rich", specifier = ">=13.9.0" },
     { name = "sqlite-utils", specifier = ">=3.38" },
-    { name = "starlette", marker = "extra == 'asgi'", specifier = ">=0.41.0" },
     { name = "typer", specifier = ">=0.15.0" },
 ]
-provides-extras = ["asgi", "spec"]
+provides-extras = ["spec"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -835,19 +831,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b3/e3/6b1106349e2576c18409b27bd3b16f193b1cf38220d98ad22aa454c5e075/sqlite_utils-3.39.tar.gz", hash = "sha256:bfa2eac29b3e3eb5c9647283797527febcf4efd4a9bbb31d979a14a11ef9dbcd", size = 215324, upload-time = "2025-11-24T18:45:49.91Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/51/33/7e01d2f6b8c778529dfae9045c4f46b33ba145c3d401fa95b07f599e7403/sqlite_utils-3.39-py3-none-any.whl", hash = "sha256:349c099c0cd60d4ee9139a24d5c9cb64af3906c3e90832fcbbd74da49333374d", size = 68451, upload-time = "2025-11-24T18:45:48.366Z" },
-]
-
-[[package]]
-name = "starlette"
-version = "1.0.0"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "anyio" },
-    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/81/69/17425771797c36cded50b7fe44e850315d039f28b15901ab44839e70b593/starlette-1.0.0.tar.gz", hash = "sha256:6a4beaf1f81bb472fd19ea9b918b50dc3a77a6f2e190a12954b25e6ed5eea149", size = 2655289, upload-time = "2026-03-22T18:29:46.779Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/0b/c9/584bc9651441b4ba60cc4d557d8a547b5aff901af35bda3a4ee30c819b82/starlette-1.0.0-py3-none-any.whl", hash = "sha256:d3ec55e0bb321692d275455ddfd3df75fff145d009685eb40dc91fc66b03d38b", size = 72651, upload-time = "2026-03-22T18:29:45.111Z" },
 ]
 
 [[package]]
