@@ -7,6 +7,37 @@ name = "apinfer"
 description = "Infer your real API schema from live traffic — not from docs you forgot to update"
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Andrew Krylov", email = "luntiqes@gmail.com" },
+]
+keywords = [
+    "api",
+    "schema",
+    "inference",
+    "openapi",
+    "drift",
+    "middleware",
+    "asgi",
+    "wsgi",
+    "fastapi",
+    "monitoring",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Monitoring",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: FastAPI",
+    "Typing :: Typed",
+    "Operating System :: OS Independent",
+]
 dependencies = [
     # Core inference
     "genson>=1.3.0", # JSON Schema inference from example payloads
@@ -20,8 +51,13 @@ dependencies = [
     "pydantic>=2.10.0", # Internal dataclasses with validation
 ]
 dynamic = [
-    "version"
+    "version",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/Flacy/apinfer"
+"Repository" = "https://github.com/Flacy/apinfer"
+"Bug Tracker" = "https://github.com/Flacy/apinfer/issues"
 
 [project.optional-dependencies]
 spec = [
