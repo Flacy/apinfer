@@ -23,8 +23,6 @@ import re
 from datetime import UTC, datetime
 from typing import TYPE_CHECKING
 
-import anyio.to_thread
-
 from apinfer.core.capture import ReservoirBuffer
 from apinfer.core.inferrer import build_snapshot
 from apinfer.core.models import CapturedExchange, HttpMethod
@@ -254,10 +252,6 @@ class ApinferASGIMiddleware:
             snapshot = build_snapshot(key, exchanges)
             if snapshot is None:
                 return
-            await anyio.to_thread.run_sync(
-                self._storage.save,
-                snapshot,
-                abandon_on_cancel=True,
-            )
+            self._storage.save(snapshot)
         except Exception:
             _logger.exception("apinfer: failed to persist snapshot for %s", key)
